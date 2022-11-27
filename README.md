@@ -1,0 +1,1 @@
+.NET app with IdentityServer for and VueJs frontend. Some practice for OAuth and OpenIDConnect with IdentityServer. Some frontend to see how it works. And some practice with Clean Architecture
