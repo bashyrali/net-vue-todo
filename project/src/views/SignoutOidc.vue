@@ -9,7 +9,7 @@ export default {
   name: "SignoutOidc",
   async mounted() {
     try {
-      let result = await signoutRedirectCallback();
+      let result =  signoutRedirectCallback();
       let returnToUrl = '/';
       if (result.state !== undefined) {
         returnToUrl = result.state;

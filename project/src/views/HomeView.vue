@@ -59,9 +59,12 @@ export default {
   mounted() {
     loadUser();
     userManager.getUser().then((user) => {
-      this.currentUser = user.profile.name;
-      this.accessTokenExpired = user.expired;
-      this.isLoggedIn = (user !== null && !user.expired);
+      if (user){
+        this.currentUser = user.profile.name;
+        this.accessTokenExpired = user.expired;
+        this.isLoggedIn = (user !== null && !user.expired);
+      }
+
     });
   }
 }

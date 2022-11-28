@@ -40,18 +40,9 @@ namespace Notes.Identity
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
                     RequirePkce = true,
-                    RedirectUris =
-                    {
-                        "http://localhost:8080/signin-oidc"
-                    },
-                    AllowedCorsOrigins =
-                    {
-                        "http://localhost:8080"
-                    },
-                    PostLogoutRedirectUris =
-                    {
-                        "http://localhost:8080/signout-oidc"
-                    },
+                    RedirectUris = {"http://localhost:8080/signin-oidc"},
+                    AllowedCorsOrigins = {"http://localhost:8080"},
+                    PostLogoutRedirectUris = {"http://localhost:8080/signout-oidc"},
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

@@ -19,18 +19,15 @@ export async function loadUser(){
     const token = user?.access_token;
     setAuthHeader(token)
 }
+
 export const signinRedirect = () => userManager.signinRedirect()
 
 export const  signinRedirectCallback =async () => userManager.signinRedirectCallback()
 
 export const signoutRedirect = () => {
-    userManager.clearStaleState();
-    userManager.removeUser();
     return userManager.signoutRedirect();
 }
 export const signoutRedirectCallback = () => {
-    userManager.clearStaleState()
-    userManager.removeUser()
     return userManager.signoutRedirectCallback()
 }
 export default userManager;
